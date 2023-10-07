@@ -1,0 +1,47 @@
+<!-- LOADER -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading...</title>
+    <link rel="icon" href="assets/img/logo.png" type="image/x-icon" />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .loading-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading-content">
+      <video autoplay muted playsinline loop>
+        <source src="assets/video/logo-anim.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <script>
+      setTimeout(function () {
+        window.location.href = "src/main.html";
+      }, 3000);
+    </script>
+  </body>
+</html>
