@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -29,7 +33,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
 }
 
 .nav-logo {
@@ -201,7 +204,7 @@ header .image img {
 
 header .image img:hover {
   filter: none;
-  transform: scale(1);
+  transform: scale(0.9);
   box-shadow: 0 10px 10px rgba(255, 255, 255, 0.2);
 }
 
