@@ -132,6 +132,7 @@ header .separator {
   display: inline-block;
   text-align: center;
   color: #ccc;
+  cursor: pointer;
 }
 
 header .separator hr {
