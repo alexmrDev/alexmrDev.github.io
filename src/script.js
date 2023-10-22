@@ -22,11 +22,10 @@ link3.addEventListener("click", () => {
   scrollToElement(".column");
 });
 
-/* TEXT ANIMATION */
+/* TEXTS ANIMATION */
 const separator = document.querySelector(".separator");
 const spanInsideSeparator = separator.querySelector("span");
 const desplegable = document.querySelector(".desplegable");
-
 let spanVisible = true;
 
 separator.addEventListener("click", () => {
@@ -37,6 +36,14 @@ separator.addEventListener("click", () => {
     spanInsideSeparator.style.display = "none";
   } else {
     spanInsideSeparator.style.display = "inline";
+    const text = spanInsideSeparator.textContent;
+    spanInsideSeparator.textContent = "";
+
+    for (let i = 0; i < text.length; i++) {
+      setTimeout(() => {
+        spanInsideSeparator.textContent += text[i];
+      }, i * 75);
+    }
   }
 
   spanVisible = !spanVisible;

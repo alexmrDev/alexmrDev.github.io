@@ -350,15 +350,18 @@ section .header {
 
 footer {
   position: relative;
-  display: grid;
-  grid-template-columns: 400px repeat(3, 1fr);
-  gap: 2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer .column .logo {
   max-width: 100px;
   margin-bottom: 2rem;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -368,12 +371,14 @@ footer .column .logo {
 footer .column p {
   color: #ccc;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 footer .column .socials {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.3rem;
+  margin-top: 0.3rem;
 }
 
 footer .column .socials a {
