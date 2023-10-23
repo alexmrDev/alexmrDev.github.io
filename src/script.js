@@ -42,7 +42,7 @@ separator.addEventListener("click", () => {
     for (let i = 0; i < text.length; i++) {
       setTimeout(() => {
         spanInsideSeparator.textContent += text[i];
-      }, i * 75);
+      }, i * 100);
     }
   }
 
