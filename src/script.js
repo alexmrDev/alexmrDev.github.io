@@ -48,3 +48,14 @@ separator.addEventListener("click", () => {
 
   spanVisible = !spanVisible;
 });
+
+/* BUTTON REDIRECT */
+document.querySelectorAll(".btn").forEach(function (button) {
+  button.addEventListener("click", function () {
+    var url = this.getAttribute("data-url");
+    if (url) {
+      var newTab = window.open(url, "_blank");
+      newTab.focus();
+    }
+  });
+});
