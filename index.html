@@ -1,4 +1,3 @@
-<!-- LOADER -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,49 +7,282 @@
     <meta name="description" content="alexmrDev - Personal Portfolio" />
     <meta property="og:title" content="alexmrDev" />
     <meta property="og:description" content="alexmrDev (Personal Portfolio)" />
-    <meta property="og:image" content="../assets/img/mini.png" />
+    <meta property="og:image" content="assets/img/mini.png" />
     <meta property="og:url" content="https://alexmrdev.github.io/" />
     <meta property="og:type" content="website" />
 
     <title>alexmrDev</title>
-    
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="src/style.css" />
     <link rel="icon" href="assets/img/logo.png" type="image/x-icon" />
-    <style>
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      .loading-content {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-      }
-
-      video {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    </style>
   </head>
-  <body>
-    <div class="loading-content">
-      <video autoplay muted playsinline loop>
-        <source src="assets/video/logo-anim.mp4" type="video/mp4" />
-      </video>
-    </div>
 
-    <script>
-      setTimeout(function () {
-        window.location.href = "src/main.html";
-      }, 3000);
-    </script>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="nav-logo">
+        <a href="#">
+          <img src="assets/img/logo.png" alt="logo" />
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li class="link"><a href="#">About me</a></li>
+        <li id="link1" class="link"><a href="#">Experience</a></li>
+        <li id="link2" class="link"><a href="#">Projects</a></li>
+        <li id="link3" class="link"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ABOUT ME -->
+    <header class="container">
+      <div class="content">
+        <h4>WELLCOME TO MY PORTFOLIO !</h4>
+        <h1>Hi, I'm <span>Alex</span> . <br />Full Stack Developer</h1>
+        <p style="font-size: 18px">
+          I'm a software developer specializing in building exceptional digital
+          experiences. I'm focused on learning and carrying out
+          <b>WEB</b> projects. <br>
+          Currently working at <b>MINSAIT (Indra)</b>.
+        </p>
+        <div class="separator">
+          <hr />
+          <span>More about me</span>
+        </div>
+        <div class="desplegable">
+          <p>
+            <i>
+              I enjoy creating things that live on the Internet. My interest in
+              web development began in <b>2020</b>, when I decided to try
+              creating my own website. Turns out the process taught me a lot
+              about HTML and CSS! <br /><br />
+              Fast forward to today, I haven't had the privilege of working in
+              many places, but I am very motivated to find my place. <br />
+              My main focus these days is creating accessible and inclusive
+              digital products and experiences on my own and in the spirit of
+              learning. <br /><br />
+              I have also participated in different <b>Bootcamps</b> related to
+              the software sector, although not everything has been programming.
+            </i>
+            <br /><br />
+            Here are a few <b>technologies</b> I've been working with recently:
+          </p>
+          <ul class="arrow-list">
+            <li>JavaScript(ES6+)</li>
+            <li>Node.js</li>
+            <li>TypeScript</li>
+            <li>MySQL</li>
+            <li>Angular</li>
+            <li>Microsoft SQL Server</li>
+          </ul>
+        </div>
+      </div>
+      <div class="image">
+        <img src="assets/img/header.png" alt="header" />
+      </div>
+    </header>
+
+    <!-- EXPERIENCE & WORK -->
+    <section class="container">
+      <h2 class="header">EXPERIENCE</h2>
+      <h3>Studies & Training</h3>
+      <div class="features">
+        <div class="card">
+          <span><i class="ri-book-open-line"></i></span>
+          <h4>HIGH SCHOOL | 2020</h4>
+          <p>
+            Baccalaureate of Social Sciences with optional Mathematics and
+            Computer Science.
+          </p>
+          <p style="color: white">Madrid, Spain</p>
+        </div>
+        <div class="card">
+          <span><i class="ri-book-open-line"></i></span>
+          <h4>WAD | 2023</h4>
+          <p>
+            Senior Technician in Web Application Development plus Multiplatform
+            base.
+          </p>
+          <p style="color: white">Madrid, Spain</p>
+        </div>
+        <div class="card">
+          <span><i class="ri-book-open-line"></i></span>
+          <h4>BOOTCAMP | 2023</h4>
+          <p>Data analysis & Big data Bootcamp with Qlik Sense.</p>
+          <p style="color: white">Madrid, Spain</p>
+        </div>
+      </div>
+
+      <h3>Work</h3>
+      <div class="features">
+        <div class="card">
+          <span><i class="ri-shake-hands-line"></i></span>
+          <h4>WEB DEVELOPER - FULL STACK | 2023</h4>
+          <p>
+            I worked in the development department within the company. Internal
+            and external projects.
+          </p>
+          <a href="https://www.mercanza.es/" target="_blank"
+            >MERCANZA <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+        <div class="card">
+          <span><i class="ri-shake-hands-line"></i></span>
+          <h4>SOFTWARE DEVELOPMENT TECHNICIAN | <span style="font-size: 1rem;">Currently</span></h4>
+          <p>
+            I am currently working on different projects in this Indra company. <br>
+            IT Department.
+          </p>
+          <a href="https://www.minsait.com/es" target="_blank"
+            >MINSAIT <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="container">
+      <h2 class="header">PROJECTS</h2>
+      <p class="sub-header">Own projects or in which I have participated.</p>
+      <div class="pricing">
+        <div class="card">
+          <div class="content">
+            <h4>2023</h4>
+            <h3>PORTFOLIO</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Website
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Deployed on GitHub
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              HTML5
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              CSS3
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              JavaScript
+            </p>
+          </div>
+          <button
+            class="btn"
+            data-url="https://github.com/alexmrDev/alexmrDev.github.io"
+          >
+            Go GitHub <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <h4>2023</h4>
+            <h3>INFLUWEB</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Web project
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              XAMPP
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              PHP
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              MySQL
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              JavaScript
+            </p>
+          </div>
+          <button class="btn" data-url="https://github.com/alexmrDev/influweb">
+            Go GitHub <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <h4>2023</h4>
+            <h3>POKÉMON RP</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Web interfaces
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Angular (HTML, SCSS, TS)
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              FiveM
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              RolePlay Server
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Grand Theft Auto V
+            </p>
+          </div>
+          <button class="btn">
+            <i class="ri-git-repository-private-fill"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <div class="column">
+        <div class="logo">
+          <img src="assets/img/logo.png" alt="logo" />
+        </div>
+        <!-- <p>Contact me, follow my news or get my resume!</p> -->
+        <p>Contact me or follow my news!</p>
+        <!-- SOCIALS -->
+        <div class="socials">
+          <a href="mailto:dev.alexmr@gmail.com"><i class="ri-mail-line"></i></a>
+          <a href="tel:+34657459374"><i class="ri-phone-line"></i></a>
+          <a href="https://github.com/alexmrDev" target="_blank"
+            ><i class="ri-github-fill"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/alejandro-migall%C3%B3n-ruiz-del-valle-958a851b6/"
+            target="_blank"
+            ><i class="ri-linkedin-box-fill"></i
+          ></a>
+        </div>
+        <!-- RESUME -->
+        <!-- <div class="socials">
+          <a
+            href="../assets/resume/RESUME-ALEJANDRO_MIGALLON.pdf"
+            target="_blank"
+          ><i class="ri-attachment-line"></i></a></a>
+          <a
+            href="../assets/resume/CV-ALEJANDRO_MIGALLON.pdf"
+            target="_blank"
+          ><i class="ri-attachment-line"></i></a>
+        </div> -->
+      </div>
+    </footer>
+
+    <!-- COPYRIGHT -->
+    <div class="copyright">Designed & Built by Alejandro Migallón © 2023</div>
+
+    <!-- SCRIPTS -->
+    <script src="src/script.js"></script>
   </body>
 </html>
