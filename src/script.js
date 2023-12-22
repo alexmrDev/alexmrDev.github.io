@@ -22,8 +22,9 @@ link3.addEventListener("click", () => {
   scrollToElement(".column");
 });
 
-/* TEXTS ANIMATION */
+/* TEXT ANIMATION */
 const separator = document.querySelector(".separator");
+const hr = separator.querySelector("hr");
 const spanInsideSeparator = separator.querySelector("span");
 const desplegable = document.querySelector(".desplegable");
 let spanVisible = true;
@@ -34,6 +35,7 @@ separator.addEventListener("click", () => {
 
   if (spanVisible) {
     spanInsideSeparator.style.display = "none";
+    hr.style.borderTop = "2px solid #1d4ed8";
   } else {
     spanInsideSeparator.style.display = "inline";
     const text = spanInsideSeparator.textContent;

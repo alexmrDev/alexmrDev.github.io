@@ -30,7 +30,6 @@ body {
   background-color: #18181b;
 }
 
-
 nav {
   max-width: 1200px;
   margin: auto;
@@ -194,17 +193,12 @@ header .image img {
   width: 100%;
   height: auto;
   border-radius: 10%;
-  border-bottom: 5px solid #1d4ed8;
-  border-right: 5px solid #1d4ed8;
   overflow: hidden;
-  transform: scale(0.8);
-  filter: grayscale(100%);
+  animation: ball 4s infinite;
 }
 
 header .image img:hover {
-  filter: none;
-  transform: scale(0.9);
-  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.2);
+  animation-play-state: paused;
 }
 
 header .image img {
@@ -243,6 +237,7 @@ section .header {
   border: 2px solid transparent;
   border-radius: 15px;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .features .card:hover {
@@ -254,7 +249,6 @@ section .header {
   display: inline-block;
   background-color: #1e40af;
   padding: 2px 9px;
-  margin-bottom: 1rem;
   font-size: 1.75rem;
   color: #fff;
   border-radius: 5px;
@@ -269,12 +263,31 @@ section .header {
 
 .features .card p {
   color: #ccc;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.features .card p2 {
+  color: #fff;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: left;
+  padding: 1rem;
+  text-decoration: none;
 }
 
 .features .card a {
   color: #fff;
   transition: all 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: left;
+  padding: 1rem;
+  text-decoration: none;
 }
 
 .features .card a:hover {
@@ -437,6 +450,7 @@ a:visited {
   color: white;
 }
 
+/* MEDIAQUERY */
 @media (width < 900px) {
   .nav-links {
     display: none;
@@ -475,5 +489,46 @@ a:visited {
 
   footer {
     grid-template-columns: 1fr 150px;
+  }
+}
+
+/* KEYFRAME */
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+section {
+  view-timeline-name: --section;
+  view-timeline-axis: block;
+
+  animation-timeline: --section;
+  animation-name: show;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+@keyframes ball {
+  0%,
+  100% {
+    transform: scale(0.8);
+    filter: grayscale(100%);
+  }
+  25% {
+    transform: scale(1);
+    filter: none;
+  }
+  50%,
+  75% {
+    transform: scale(0.8);
+    filter: grayscale(100%);
   }
 }
